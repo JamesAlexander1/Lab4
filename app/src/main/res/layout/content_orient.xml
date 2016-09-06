@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,31 +8,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="a4336.a0.lab4.james.lab4.SensorListActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/sensors_found"
-        android:id="@+id/listTitle"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="a4336.a0.lab4.james.lab4.OrientActivity"
+    tools:showIn="@layout/activity_orient">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/exit"
-        android:id="@+id/retButton1"
+        android:id="@+id/exitButton3"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/listTitle"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/phone_orientation"
+        android:id="@+id/OrientTitle"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/retButton1"
-        tools:listitem="@android:layout/simple_list_item_1" />
+        android:layout_marginTop="159dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/orientStatusText"
+        android:layout_below="@+id/OrientTitle"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
