@@ -15,6 +15,25 @@
         android:text="@string/find_sensors"
         android:id="@+id/Sensebutton"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_data"
+        android:id="@+id/dataButton"
+        android:layout_below="@+id/Sensebutton"
+        android:layout_alignLeft="@+id/Sensebutton"
+        android:layout_alignStart="@+id/Sensebutton"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_orientation"
+        android:id="@+id/orientButton"
+        android:layout_below="@+id/dataButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="34dp" />
+
 </RelativeLayout>

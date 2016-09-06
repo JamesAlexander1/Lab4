@@ -20,11 +20,44 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                //code to start SensorListActivity upon pressing of button.
+                //code to start SensorListActivity (q1)
                 Intent intent = new Intent(MainActivity.this, SensorListActivity.class);
                 startActivity(intent);
+
                 String temp = "Search again?";
                 btn.setText(temp);
+            }
+        });
+
+
+        final Button btn2 = (Button) findViewById(R.id.dataButton);
+        btn2.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                //code to start DataActivity (q2)
+                Intent intent = new Intent(MainActivity.this, DataActivity.class);
+                startActivity(intent);
+
+                String temp = "View Data Again?";
+                btn2.setText(temp);
+            }
+        });
+
+
+        final Button btn3 = (Button) findViewById(R.id.orientButton);
+        btn3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                //code to start OrientationActivity (q3)
+                Intent intent = new Intent(MainActivity.this, OrientActivity.class);
+                startActivity(intent);
+
+                String temp = "Display Orientation Again ?";
+                btn3.setText(temp);
             }
         });
     }

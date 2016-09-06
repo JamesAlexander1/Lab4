@@ -15,6 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SensorListActivity" />
+        <activity android:name=".DataActivity" />
+        <activity
+            android:name=".OrientActivity"
+            android:label="@string/title_activity_orient"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

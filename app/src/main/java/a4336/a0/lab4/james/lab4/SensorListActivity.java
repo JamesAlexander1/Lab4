@@ -1,6 +1,7 @@
 package a4336.a0.lab4.james.lab4;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.List;
@@ -20,10 +22,7 @@ public class SensorListActivity extends AppCompatActivity{
     private List<Sensor> sensorList;
 
 
-    //disregard this code
-    /*public SensorListActivity() {
-        sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-    } */                              // NOT Context.getSystemService
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +33,18 @@ public class SensorListActivity extends AppCompatActivity{
         //SensorManager returns list of sensors on device, calls displaySensors();
         sensorList = sensorManager.getSensorList(Sensor.TYPE_ALL);
         System.out.println("about to display");
+
+        //button for returning to MainActivity
+        final Button btn3 = (Button) findViewById(R.id.retButton1);
+        btn3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                finish();
+
+            }
+        });
         displaySensors();
 
 
@@ -59,7 +70,7 @@ public class SensorListActivity extends AppCompatActivity{
 
         //initialises listView and displays Sensor Details
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sensorDetails);
-        ListView listView = (ListView) findViewById(R.id.sensorList);
+        ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
     }
